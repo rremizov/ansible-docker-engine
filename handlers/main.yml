@@ -1,3 +1,7 @@
 ---
 - name: run hello-world image
   shell: docker run hello-world
+
+- name: restart docker
+  service: name=docker state=restarted
+  throttle: 1 # Don't restart all at once.

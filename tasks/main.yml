@@ -26,6 +26,13 @@
   notify:
     - run hello-world image
 
+- name: Install daemon.json
+  template:
+    src: daemon.json
+    dest: /etc/docker/daemon.json
+  notify:
+    - restart docker
+
 - name: Check for existing Docker Compose binary
   stat:
     path: "{{ docker_compose_path }}"
