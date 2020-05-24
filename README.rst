@@ -18,5 +18,12 @@ Role Vars
 
 Root directory of persistent Docker state (`docker docs`_). Default: ``/var/lib/docker``.
 
-.. _docker docs: https://docs.docker.com/engine/reference/commandline/dockerd/
 
+``docker_engine_bench_security_enabled``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Enable to run `docker-bench-security`_ daily. Default: ``no``.
+
+
+.. _docker docs: https://docs.docker.com/engine/reference/commandline/dockerd/
+.. _docker-bench-security: https://github.com/docker/docker-bench-security
