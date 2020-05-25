@@ -4,4 +4,4 @@
 
 - name: restart docker
   service: name=docker state=restarted
-  serial: 1 # Don't restart all at once.
+  throttle: 1 # Don't restart all at once.
