@@ -1,0 +1,7 @@
+---
+- name: Login into Docker Registries
+  docker_login:
+    registry_url: "{{ item.registry_url }}"
+    username: "{{ item.username }}"
+    password: "{{ item.password }}"
+  loop: "{{ docker_engine_login }}"

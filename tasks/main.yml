@@ -7,3 +7,6 @@
 
 - name: Include security related tasks
   include_tasks: security.yml
+
+- name: Login into Docker Registries
+  include_tasks: login.yml
