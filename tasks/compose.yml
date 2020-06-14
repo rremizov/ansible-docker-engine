@@ -1,0 +1,23 @@
+---
+- name: Check for existing Docker Compose binary
+  stat:
+    path: "{{ docker_compose_path }}"
+  register: check_docker_compose_binary
+  changed_when: False
+
+- name: Get output of "uname -s"
+  shell: uname -s
+  register: uname_s
+  when: (not check_docker_compose_binary.stat.exists)
+
+- name: Get output of "uname -m"
+  shell: uname -m
+  register: uname_m
+  when: (not check_docker_compose_binary.stat.exists)
+
+- name: Install docker compose
+  get_url:
+    url: "{{ docker_compose_url }}/{{ docker_compose_version }}/docker-compose-{{ uname_s.stdout }}-{{ uname_m.stdout }}"
+    dest: "{{ docker_compose_path }}"
+    mode: "755"
+  when: (not check_docker_compose_binary.stat.exists)

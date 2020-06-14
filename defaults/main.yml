@@ -4,3 +4,4 @@ docker_compose_version: 1.24.0
 docker_compose_path: /usr/local/bin/docker-compose
 docker_engine_data_root: /var/lib/docker
 docker_engine_bench_security_enabled: no
+docker_engine_auditd: no

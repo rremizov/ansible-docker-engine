@@ -24,6 +24,10 @@ Root directory of persistent Docker state (`docker docs`_). Default: ``/var/lib/
 
 Enable to run `docker-bench-security`_ daily. Default: ``no``.
 
+``docker_engine_auditd``
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Enable to configure auditd. Default: ``no``.
 
 .. _docker docs: https://docs.docker.com/engine/reference/commandline/dockerd/
 .. _docker-bench-security: https://github.com/docker/docker-bench-security
