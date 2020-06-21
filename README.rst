@@ -28,6 +28,11 @@ A list of docker registries to login. See the schema in the examples.
 
 Enable to run `docker-bench-security`_ daily. Default: ``no``.
 
+``docker_engine_icc``
+~~~~~~~~~~~~~~~~~~~~~
+
+Enable inter-container communication. Default: ``yes``.
+
 ``docker_engine_auditd``
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
