@@ -1,3 +1,4 @@
+---
 - name: Setup docker-bench-security cronjob
   cron:
     name: "Run docker-bench-security."

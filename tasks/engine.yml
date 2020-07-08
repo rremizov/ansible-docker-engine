@@ -16,19 +16,29 @@
 
 - name: Add Docker repository
   apt_repository:
-    repo: "deb [arch=amd64] https://download.docker.com/linux/debian {{ ansible_lsb.codename }} stable"
+    repo: >
+      deb [arch=amd64]
+      https://download.docker.com/linux/debian
+      {{ ansible_distribution_release }} stable
     state: present
 
 - name: Install Docker
   apt:
     name: docker-ce
     state: present
-  notify:
-    - run hello-world image
+
+- name: Create /etc/docker
+  file:
+    path: /etc/docker
+    state: directory
+    owner: root
+    group: root
+    mode: "0700"
 
 - name: Install daemon.json
   template:
     src: daemon.json.j2
     dest: /etc/docker/daemon.json
+    mode: "0640"
   notify:
     - restart docker

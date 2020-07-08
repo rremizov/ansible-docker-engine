@@ -3,15 +3,15 @@
   stat:
     path: "{{ docker_compose_path }}"
   register: check_docker_compose_binary
-  changed_when: False
+  changed_when: (False)
 
 - name: Get output of "uname -s"
-  shell: uname -s
+  shell: uname -s # noqa 305
   register: uname_s
   when: (not check_docker_compose_binary.stat.exists)
 
 - name: Get output of "uname -m"
-  shell: uname -m
+  shell: uname -m # noqa 305
   register: uname_m
   when: (not check_docker_compose_binary.stat.exists)
 

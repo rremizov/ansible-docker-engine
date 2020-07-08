@@ -8,16 +8,16 @@ docker_engine_data_root: /var/lib/docker
 
 # Enable to run docker-bench-security daily.
 # https://github.com/docker/docker-bench-security
-docker_engine_bench_security_enabled: no
+docker_engine_bench_security_enabled: false
 
 # Enable to configure auditd.
-docker_engine_auditd: no
+docker_engine_auditd: false
 
 # Enable to prevent privilege escalation from containers.
-docker_engine_no_new_privileges: yes
+docker_engine_no_new_privileges: true
 
 # Enable to allow inter-container communication.
-docker_engine_icc: no
+docker_engine_icc: false
 
 # A list of docker registries to login.
 # Example:
