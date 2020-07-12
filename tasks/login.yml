@@ -5,3 +5,5 @@
     username: "{{ item.username }}"
     password: "{{ item.password }}"
   loop: "{{ docker_engine_login }}"
+  loop_control:
+    label: "{{ item.registry_url }}"
