@@ -2,8 +2,30 @@
 docker_compose_url: https://github.com/docker/compose/releases/download
 docker_compose_version: 1.24.0
 docker_compose_path: /usr/local/bin/docker-compose
+
+# Root directory of the persistent Docker state.
 docker_engine_data_root: /var/lib/docker
+
+# Enable to run docker-bench-security daily.
+# https://github.com/docker/docker-bench-security
 docker_engine_bench_security_enabled: no
+
+# Enable to configure auditd.
 docker_engine_auditd: no
-docker_engine_icc: yes
+
+# Enable to prevent privilege escalation from containers.
+docker_engine_no_new_privileges: yes
+
+# Enable to allow inter-container communication.
+docker_engine_icc: no
+
+# A list of docker registries to login.
+# Example:
+# docker_engine_login:
+#   - registry_url: https://url1.com
+#     username: username1
+#     password: password1
+#   - registry_url: https://url2.com
+#     username: username2
+#     password: password2
 docker_engine_login: []
