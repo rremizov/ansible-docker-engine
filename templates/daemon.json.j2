@@ -1,5 +1,6 @@
 {
   "data-root": "{{ docker_engine_data_root }}",
   "no-new-privileges": {{ docker_engine_no_new_privileges | to_json }},
-  "icc": {{ docker_engine_icc | to_json }}
+  "icc": {{ docker_engine_icc | to_json }},
+  "userland-proxy": {{ docker_engine_userland_proxy | to_json }}
 }

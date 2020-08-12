@@ -20,7 +20,9 @@ class TestDaemonJson:
     def test_is_valid_json(self, daemon_json_content):
         json.loads(daemon_json_content)
 
-    @pytest.mark.parametrize("config_option", ["no-new-privileges", "icc"])
+    @pytest.mark.parametrize(
+        "config_option", ["no-new-privileges", "icc", "userland-proxy"]
+    )
     def test_booleans(self, daemon_json_content, config_option):
         assert isinstance(json.loads(daemon_json_content)[config_option], bool)
 

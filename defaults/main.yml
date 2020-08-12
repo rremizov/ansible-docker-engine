@@ -19,6 +19,9 @@ docker_engine_no_new_privileges: true
 # Enable to allow inter-container communication.
 docker_engine_icc: false
 
+# Enable to use userland proxy for loopback traffic.
+docker_engine_userland_proxy: false
+
 # A list of docker registries to login.
 # Example:
 # docker_engine_login:
