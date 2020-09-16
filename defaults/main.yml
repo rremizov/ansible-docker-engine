@@ -22,6 +22,10 @@ docker_engine_icc: false
 # Enable to use userland proxy for loopback traffic.
 docker_engine_userland_proxy: false
 
+# Log driver and log options
+#docker_engine_log_driver:
+#docker_engine_log_opts:
+
 # A list of docker registries to login.
 # Example:
 # docker_engine_login:

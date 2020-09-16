@@ -21,10 +21,17 @@ class TestDaemonJson:
         json.loads(daemon_json_content)
 
     @pytest.mark.parametrize(
-        "config_option", ["no-new-privileges", "icc", "userland-proxy"]
+        "config_option, expected_type",
+        [
+            ("no-new-privileges", bool),
+            ("icc", bool),
+            ("userland-proxy", bool),
+            ("log-driver", str),
+            ("log-opts", dict),
+        ],
     )
-    def test_booleans(self, daemon_json_content, config_option):
-        assert isinstance(json.loads(daemon_json_content)[config_option], bool)
+    def test_booleans(self, daemon_json_content, config_option, expected_type):
+        assert isinstance(json.loads(daemon_json_content)[config_option], expected_type)
 
 
 class TestDockerService:
