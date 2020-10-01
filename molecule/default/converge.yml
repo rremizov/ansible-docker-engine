@@ -5,3 +5,6 @@
     - name: "Include docker-engine"
       include_role:
         name: "ansible-docker-engine"
+  vars:
+    docker_engine_log_driver: syslog
+    docker_engine_log_opts: {}

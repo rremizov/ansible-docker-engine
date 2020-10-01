@@ -3,7 +3,7 @@
   "icc": {{ docker_engine_icc | to_json }},
   "userland-proxy": {{ docker_engine_userland_proxy | to_json }},
   {% if docker_engine_log_driver is defined %}
-  "log-driver": {{ docker_engine_log_driver }},
+  "log-driver": "{{ docker_engine_log_driver }}",
   {% endif %}
   {% if docker_engine_log_opts is defined %}
   "log-opts": {{ docker_engine_log_opts | to_json }},
