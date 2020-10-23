@@ -22,6 +22,9 @@ docker_engine_icc: false
 # Enable to use userland proxy for loopback traffic.
 docker_engine_userland_proxy: false
 
+# Enable Docker Content Trust (https://docs.docker.com/engine/security/trust/).
+docker_engine_content_trust: false
+
 # Log driver and log options
 #docker_engine_log_driver:
 #docker_engine_log_opts:

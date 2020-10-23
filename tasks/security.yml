@@ -44,3 +44,18 @@
   notify:
     - restart auditd
   when: docker_engine_auditd
+
+- name: Enabled Content Trust
+  lineinfile:
+    path: /etc/environment
+    regexp: "^DOCKER_CONTENT_TRUST="
+    line: DOCKER_CONTENT_TRUST=1
+    state: present
+  when: docker_engine_content_trust
+
+- name: Disable Content Trust
+  lineinfile:
+    path: /etc/environment
+    regexp: "^DOCKER_CONTENT_TRUST="
+    state: absent
+  when: not docker_engine_content_trust
