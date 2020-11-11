@@ -1,4 +1,4 @@
-Docker Engine
+Docker Engine ![](https://travis-ci.com/rremizov/ansible-docker-engine.svg?branch=master)
 =============
 
 Install Docker Engine and Docker Compose.
