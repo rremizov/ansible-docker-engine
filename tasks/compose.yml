@@ -17,7 +17,8 @@
 
 - name: Install docker compose
   get_url:
-    url: "{{ docker_compose_url }}/{{ docker_compose_version }}/docker-compose-{{ uname_s.stdout }}-{{ uname_m.stdout }}"
+    url: "{{ docker_compose_url }}/{{ docker_compose_version }}\
+      /docker-compose-{{ uname_s.stdout }}-{{ uname_m.stdout }}"
     dest: "{{ docker_compose_path }}"
     mode: "755"
   when: (not check_docker_compose_binary.stat.exists)

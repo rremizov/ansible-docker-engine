@@ -26,8 +26,8 @@ docker_engine_userland_proxy: false
 docker_engine_content_trust: false
 
 # Log driver and log options
-#docker_engine_log_driver:
-#docker_engine_log_opts:
+# docker_engine_log_driver:
+# docker_engine_log_opts:
 
 # A list of docker registries to login.
 # Example:
