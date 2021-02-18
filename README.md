@@ -1,5 +1,7 @@
-Docker Engine ![](https://travis-ci.com/rremizov/ansible-docker-engine.svg?branch=master)
+Docker Engine
 =============
+
+[![CI](https://github.com/rremizov/ansible-docker-engine/workflows/CI/badge.svg?event=push)](https://github.com/rremizov/ansible-docker-engine/actions?query=workflow%3ACI)
 
 Install Docker Engine and Docker Compose.
 
