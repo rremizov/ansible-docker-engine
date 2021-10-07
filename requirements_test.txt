@@ -3,5 +3,5 @@ ansible-lint==5.2.0
 black==21.9b0
 docker==5.0.2
 isort==5.9.3
-molecule[docker]==3.5.1
+molecule[docker]==3.5.2
 pytest-testinfra==6.4.0
