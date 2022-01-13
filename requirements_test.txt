@@ -1,4 +1,4 @@
-ansible==5.1.0
+ansible==5.2.0
 ansible-lint==5.3.2
 black==21.12b0
 docker==5.0.3
