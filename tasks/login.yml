@@ -9,7 +9,7 @@
       - python3-docker
 
 - name: Login into Docker Registries
-  docker_login:
+  community.docker.docker_login:
     registry_url: "{{ item.registry_url }}"
     username: "{{ item.username }}"
     password: "{{ item.password }}"

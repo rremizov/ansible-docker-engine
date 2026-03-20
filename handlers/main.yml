@@ -1,7 +1,11 @@
 ---
-- name: restart docker
-  service: name=docker state=restarted
-  throttle: 1 # Don't restart all at once.
+- name: Restart docker
+  service:
+    name: docker
+    state: restarted
+  throttle: 1  # Don't restart all at once.
 
-- name: restart auditd
-  service: name=auditd state=restarted
+- name: Restart auditd
+  service:
+    name: auditd
+    state: restarted

@@ -6,13 +6,15 @@
   changed_when: (False)
 
 - name: Get output of "uname -s"
-  shell: uname -s # noqa 305
+  command: uname -s
   register: uname_s
+  changed_when: false
   when: (not check_docker_compose_binary.stat.exists)
 
 - name: Get output of "uname -m"
-  shell: uname -m # noqa 305
+  command: uname -m
   register: uname_m
+  changed_when: false
   when: (not check_docker_compose_binary.stat.exists)
 
 - name: Install docker compose
