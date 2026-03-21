@@ -15,7 +15,7 @@ Features
 Requirements
 ------------
 
-- Debian
+- Debian 11+
 - Ansible 2.8+
 
 Role Vars
