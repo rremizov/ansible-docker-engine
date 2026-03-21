@@ -5,10 +5,11 @@ driver:
   name: docker
 platforms:
   - name: instance
-    image: geerlingguy/docker-debian10-ansible:latest
+    image: "geerlingguy/docker-${MOLECULE_DISTRO:-debian10}-ansible:latest"
     pre_build_image: true
     privileged: true # To run systemd inside image
-    volumes: # To run systemd inside image
+    cgroupns_mode: host
+    volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:rw
     command: null # Use the default image's CMD.
 provisioner:
