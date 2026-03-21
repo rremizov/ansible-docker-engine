@@ -42,4 +42,4 @@
     dest: /etc/docker/daemon.json
     mode: "0640"
   notify:
-    - restart docker
+    - Restart docker

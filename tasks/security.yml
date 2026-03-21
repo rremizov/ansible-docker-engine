@@ -42,7 +42,7 @@
       -w /usr/bin/docker-runc -p wa
     state: present
   notify:
-    - restart auditd
+    - Restart auditd
   when: docker_engine_auditd
 
 - name: Enabled Content Trust
