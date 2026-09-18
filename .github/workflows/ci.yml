@@ -16,12 +16,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out the codebase.
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           path: "ansible-docker-engine"
 
       - name: Set up Python 3.
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v7
         with:
           python-version: "3.x"
 
@@ -39,17 +39,17 @@ jobs:
     strategy:
       matrix:
         distro:
-          - debian11
           - debian12
+          - debian13
 
     steps:
       - name: Check out the codebase.
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           path: "ansible-docker-engine"
 
       - name: Set up Python 3.
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v7
         with:
           python-version: "3.x"
 
