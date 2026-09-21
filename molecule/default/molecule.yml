@@ -7,6 +7,9 @@ platforms:
   - name: instance
     image: "geerlingguy/docker-${MOLECULE_DISTRO:-debian12}-ansible:latest"
     pre_build_image: true
+    # Without this, the driver overrides the image CMD (/lib/systemd/systemd)
+    # with a sleep loop, so systemd never runs as PID 1 and service tasks fail.
+    override_command: false
     privileged: true # To run systemd inside image
     cgroupns_mode: host
     volumes:
