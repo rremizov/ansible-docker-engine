@@ -16,7 +16,7 @@ Requirements
 ------------
 
 - Debian 12+
-- Ansible 2.8+
+- Ansible 2.15+
 
 Role Vars
 ---------
